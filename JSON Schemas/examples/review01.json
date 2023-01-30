@@ -1,0 +1,10 @@
+{
+    "$schema": "../review_schema.json",
+    "id": 1,
+    "filmId": 2,
+    "completed": true,
+    "reviewDate": "2022-02-22",
+    "rating": 7,
+    "review": "Non molto interessante.",
+    "coop": false
+}

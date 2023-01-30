@@ -1,0 +1,8 @@
+{
+    "$schema": "../vote_schema.json",
+    "Id": 1,
+    "draftId": 1,
+    "agree": false,
+    "description": "I do not agree at all.",
+    "userId": 1
+}

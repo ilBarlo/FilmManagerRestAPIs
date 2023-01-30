@@ -1,0 +1,9 @@
+{
+    "$schema": "../draft_schema.json",
+    "id": 1,
+    "reviewId": 1,
+    "rating": 10,
+    "review": "Great Film!",
+    "userId": 3,
+    "status": "IN_PROGRESS"
+}

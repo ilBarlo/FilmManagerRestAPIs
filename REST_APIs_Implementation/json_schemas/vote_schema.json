@@ -1,0 +1,50 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://www.my-schema.com/vote_schema.json",
+  "title": "Review",
+  "description": "JSON Schema for Vote data structures",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "$schema": {
+      "type": "string",
+      "description": "path to the JSON Schema to use for the validation of the JSON file describing the vote"
+    },
+    "Id": {
+      "type": "integer",
+      "description": "unique identifier of the the vote"
+    },
+    "draftId": {
+      "type": "integer",
+      "description": "unique identifier of the draft that the vote refers"
+    },
+    "agree": {
+      "type": "boolean",
+      "description": "true if who expresses its vote agrees"
+    },
+    "description": {
+      "type": "string",
+      "description": "a textual description of the vote, must be present only if agree is false",
+      "maxLength": 1000
+    },
+    "userId": {
+      "type": "integer",
+      "description": "unique identifier of the creator of the draft"
+    }
+  },
+  "required": [
+    "draftId",
+    "userId",
+    "agree"
+  ],
+  "if": {
+    "properties": {
+      "agree": {
+        "const": false
+      }
+    }
+  },
+  "then": {
+    "required": ["description"]
+  }
+}
